@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+
+    <style>
+      #second-title {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>This Is A Header</h1>
+    </header>
+    <main>
+      <section id="blogs">
+        <header>
+          <h2>Blogs List</h2>
+          <ul id="blog-list">
+            <li>blog-1</li>
+            <li>blog-2</li>
+            <li>blog-3</li>
+            <li>blog-4</li>
+          </ul>
+        </header>
+        <article class="blog">
+          <h3>my awesome blog 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+            explicabo nam quis excepturi! Deserunt sunt facilis, rerum fuga
+            neque sapiente.
+          </p>
+        </article>
+        <article class="blog" id="second-blog">
+          <h3 id="second-title">my awesome blog 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt
+            recusandae, sed minus rem culpa quae odit ratione in officia
+            perferendis?
+          </p>
+        </article>
+        <article class="blog">
+          <h3 id="third-title">my awesome blog 3</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          dolorum adipisci commodi, ab nihil neque laborum voluptates fugiat
+          quo? Voluptates.
+        </article>
+      </section>
+    </main>
+
+    <script>
+      /*       const student = {
+             name: "Kissmot Ali",
+             age: 20,
+             height: 5.5,
+           };
+           //   console.log(student);
+           const blogTitles = document.getElementsByTagName("h3");
+           //   console.log(blogTitles);
+           for (const title of blogTitles) {
+             // console.log(title);
+           }
+      */
+      /*       const secondTitle = document.getElementById("second-title");
+           secondTitle.style.backgroundColor = "green";
+           secondTitle.style.textAlign = "center";
+           const thirdTitle = document.getElementById("third-title");
+           thirdTitle.innerText = "hello world";
+           thirdTitle.style.margin = "100px"; */
+
+      //   create and add element by using javascript
+
+      //   step1 - create an element
+
+      const li = document.createElement("li");
+      li.innerText = "blog-5";
+      //   step2 - add it as a child
+      const blogList = document.getElementById("blog-list");
+
+      blogList.appendChild(li);
+
+      //   add article
+
+      const article = document.createElement("article");
+      article.classList.add("blog");
+      //   const h3 = document.createElement("h3");
+      //   h3.innerText = "My Awesome blog 4";
+      //   const p = document.createElement("p");
+      //   p.innerText = "lorem ldfjdkdkf djdj d dfdjdkf dfdjfk djdjddjj";
+
+      //   article.appendChild(h3);
+      //   article.appendChild(p);
+
+      article.innerHTML = `
+    <h3>My Awesome blog 4</h3>
+    <p>lorem dfdf ipsum dolor ddkfdfkdjffkf </p>`;
+
+      //parent of articles
+
+      const blogSection = document.getElementById("blogs");
+      blogSection.appendChild(article);
+
+      const blogs = document.getElementsByClassName("blog");
+
+      for (const blog of blogs) {
+        blog.style.border = "2px solid orange";
+        blog.style.borderRadius = "15px";
+        blog.style.marginBottom = "10px";
+      }
+
+      const title = document.getElementById("second-title");
+      console.log(title.childNodes);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Events</title>
+  </head>
+  <body>
+    <h2>More Events</h2>
+
+    <section>
+      <h3 id="secret-info">Very Very Important Secret Information</h3>
+      <input
+        type="text"
+        name=""
+        id="delete-field"
+        placeholder="please type delete"
+      />
+      <button id="delete-btn" disabled>Delete</button>
+    </section>
+
+    <script>
+      document
+        .getElementById("delete-btn")
+        .addEventListener("click", function () {
+          document.getElementById("secret-info").style.display = "none";
+        });
+
+      //focus
+      document
+        .getElementById("delete-field")
+        .addEventListener("focus", function () {
+          document.body.style.backgroundColor = "red";
+        });
+      // blur
+      document
+        .getElementById("delete-field")
+        .addEventListener("blur", function () {
+          document.body.style.backgroundColor = "unset";
+        });
+      //keydown
+      /*    document
+        .getElementById("delete-field")
+        .addEventListener("keydown", function () {
+          const deleteField = document.getElementById("delete-field");
+          console.log(deleteField.value);
+        }); */
+      // keypress
+      /* document
+        .getElementById("delete-field")
+        .addEventListener("keypress", function () {
+          const deleteField = document.getElementById("delete-field");
+          console.log(deleteField.value);
+        }); */
+      //keyup
+      document
+        .getElementById("delete-field")
+        .addEventListener("keyup", function (e) {
+          const deleteBtn = document.getElementById("delete-btn");
+          if (e.target.value === "delete") {
+            deleteBtn.removeAttribute("disabled");
+          } else {
+            deleteBtn.setAttribute("disabled", true);
+          }
+        });
+      //change
+      document
+        .getElementById("delete-field")
+        .addEventListener("change", function () {
+          const deleteField = document.getElementById("delete-field");
+          console.log(deleteField.value);
+        });
+    </script>
+  </body>
+</html>

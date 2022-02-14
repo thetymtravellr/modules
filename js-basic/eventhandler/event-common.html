@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="text"></p>
+    <input id="name-field" type="text" />
+    <button id="update">Update</button>
+    <button onclick="handleClick()">Just Function</button>
+    <button id="handle-event">addEvent Listener</button>
+
+    <script>
+      // using function
+      function handleClick() {
+        const p = document.getElementById("text");
+        p.innerText = "Set By Using Function";
+      }
+
+      //direct
+      document
+        .getElementById("handle-event")
+        .addEventListener("click", function () {
+          const p = document.getElementById("text");
+          p.innerText = "set by direct add event listener";
+        });
+
+      // direct with input field
+
+      document.getElementById("update").addEventListener("click", function () {
+        const nameField = document.getElementById("name-field");
+        const p = document.getElementById("text");
+
+        p.innerText = nameField.value;
+        nameField.value = "";
+      });
+    </script>
+  </body>
+</html>

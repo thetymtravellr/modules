@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h3>my friends</h3>
+    </header>
+    <main>
+      <section>
+        <ul id="friends">
+          <li>myFriends-1</li>
+          <li>myFriends-2</li>
+          <li>myFriends-3</li>
+          <li>myFriends-4</li>
+          <li>myFriends-5</li>
+          <li>myFriends-6</li>
+          <li>myFriends-7</li>
+          <li>myFriends-8</li>
+          <li>myFriends-9</li>
+          <li>myFriends-10</li>
+        </ul>
+      </section>
+      <section>
+        <p>lorem5</p>
+        <p>lorem5</p>
+        <p>lorem5</p>
+        <p>lorem5</p>
+        <p id="special-blog">lorem5</p>
+        <p>lorem5</p>
+        <p>lorem5</p>
+        <p>lorem5</p>
+        <p>lorem5</p>
+        <p>lorem5</p>
+      </section>
+    </main>
+
+    <script>
+      const blogs = document.getElementsByTagName("p");
+
+      console.log(blogs);
+
+      for (const blog of blogs) {
+        blog.style.backgroundColor = "steelblue";
+        blog.style.color = "white";
+        blog.style.padding = "2rem";
+      }
+
+      const harum = document.getElementById("special-blog");
+      // harum.innerText = "New Harum";
+      harum.innerHTML = `
+      <h3> Speacial InnerHtml </h3>
+      <p> lorem ipsum dolor </p>
+      `;
+
+      const friends = document.getElementById("friends");
+      const fifth = friends.children[4];
+      console.log(fifth);
+      friends.removeChild(fifth);
+
+      //create element
+      const friend = document.createElement("li");
+
+      friend.innerText = "friend-11";
+      friends.appendChild(friend);
+    </script>
+    <!-- <script src="app.js"></script> -->
+  </body>
+</html>
