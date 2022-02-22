@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo</title>
+
+    <style>
+      h1::before,
+      h1::after {
+        content: "hello";
+        color: yellowgreen;
+      }
+      h2 {
+        display: inline-block;
+      }
+      h2::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: magenta;
+        display: block;
+      }
+      blockquote::before {
+        content: open-quote;
+        color: lime;
+        font-size: 1.25rem;
+      }
+      blockquote::after {
+        content: close-quote;
+        color: mediumblue;
+        font-size: 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Having Fun With Before</h1>
+    <h1>Having Fun With After</h1>
+    <section>
+      <h2>best quotes</h2>
+      <blockquote>
+        There is something more terrible than a hell of suffering - a hell of
+        boredom.
+      </blockquote>
+    </section>
+  </body>
+</html>

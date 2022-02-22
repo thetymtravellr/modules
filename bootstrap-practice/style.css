@@ -1,0 +1,22 @@
+.nav {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.card-img {
+  height: 22rem;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.card-title {
+  font-size: 3.4rem;
+}
+
+.top-blog-link {
+  font-size: 2rem;
+}

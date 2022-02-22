@@ -30,7 +30,7 @@
       <section class="container">
         <div class="top-players">
           <h2 class="section-title">Top Players</h2>
-          <div class="players">
+          <div class="players" id="players">
             <div class="player">
               <img src="images/players/player-1.png" alt="" />
               <h3 class="player-name">John Smith</h3>
@@ -182,6 +182,25 @@
           </div>
         </div>
       </section>
+
+      <!-- add ul using js -->
+      <section class="ul" id="list-container">
+        <div>
+          <ul id="list">
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+          </ul>
+          <button id="add-item">Click Me</button>
+        </div>
+        <div id="input-container">
+          <button id="decrement">-</button>
+          <input id="input" type="number" min="0" value="0" />
+          <button id="increment">+</button>
+        </div>
+      </section>
     </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
