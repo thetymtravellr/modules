@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/35eaa9d67f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="h-screen">
+    <section>
+      <div>
+        <input
+          class="px-4 py-1"
+          type="text"
+          id="input"
+          placeholder="enter city"
+        />
+        <button class="search-btn" id="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </section>
+    <section class="weather-container flex items-center justify-around w-full">
+      <div class="w-20 text-center text-8xl text-amber-300">
+        <i
+          id="sunny"
+          class="fa-solid fa-sun fa-spin hidden"
+          style="--fa-animation-duration: 15s"
+        ></i>
+        <i id="cloudy" class="fa-solid fa-cloud hidden"></i>
+        <i id="raining" class="fa-solid fa-cloud-showers-heavy hidden"></i>
+
+        <!-- <i id="cloudy" class="fa-solid fa-cloud-sun"></i> -->
+      </div>
+      <div class="w-60 text-center mx-12">
+        <div class="-translate-y-10">
+          <p class="text-2xl text-blue-400">
+            <span id="city"></span>,
+            <span id="country"></span>
+          </p>
+        </div>
+        <h1 class="text-8xl text-black font-light">
+          <span id="temp"></span>°C
+        </h1>
+        <p class="text-black text-2xl mt-4"><span id="far"></span>°F</p>
+      </div>
+      <div class="w-40 flex flex-col space-y-6 text-2xl">
+        <div><i class="fa-solid fa-wind mr-3"></i> <span id="air"></span></div>
+        <div>
+          <i class="fa-solid fa-cloud mr-3"></i><span id="cloud"></span>
+        </div>
+        <div>
+          <i class="fa-solid fa-droplet mr-3"></i> <span id="humidity"></span>
+        </div>
+      </div>
+    </section>
+    <section></section>
+    <footer></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
