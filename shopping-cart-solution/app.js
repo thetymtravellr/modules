@@ -25,9 +25,11 @@ function getValue(product) {
         const productQuantity = document.getElementById(product + '-input');
         const productNumber = parseInt(productQuantity.value);
         return productNumber;
+     
 }
 
 function calculateTotal () {
+    console.count('get value function')
     const phoneTotal = getValue('phone') * 1219;
     const caseTotal = getValue('case') * 59;
     const subTotal = phoneTotal + caseTotal;
